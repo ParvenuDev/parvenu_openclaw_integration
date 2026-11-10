@@ -1,0 +1,39 @@
+{
+  "name": "@parvenudev/openclaw-parvenu",
+  "version": "1.0.0",
+  "description": "Parvenu B2B lead sourcing and enrichment tools for OpenClaw: lead lists with verified emails, work-email lookup, LinkedIn profiles, company search.",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://parvenu.io",
+  "files": [
+    "dist",
+    "openclaw.plugin.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "typebox": "^1.4.5"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.5.17"
+  },
+  "devDependencies": {
+    "openclaw": "2026.11.1",
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  },
+  "openclaw": {
+    "extensions": [
+      "./dist/index.js"
+    ],
+    "compat": {
+      "pluginApi": ">=2026.5.17"
+    },
+    "build": {
+      "openclawVersion": "2026.11.1"
+    }
+  }
+}

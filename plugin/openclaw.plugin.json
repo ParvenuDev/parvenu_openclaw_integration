@@ -1,0 +1,42 @@
+{
+  "id": "parvenu",
+  "name": "Parvenu",
+  "description": "B2B lead sourcing and enrichment: lead lists with verified emails, work-email lookup, LinkedIn profiles, company search.",
+  "version": "1.0.0",
+  "categories": [
+    "sales-marketing"
+  ],
+  "activation": {
+    "onStartup": true
+  },
+  "uiHints": {
+    "apiKey": {
+      "label": "Parvenu API key",
+      "help": "From your account at app.parvenu.io. Every call is billed to this account's credits. If empty, the PARVENU_API_KEY environment variable is used.",
+      "sensitive": true
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "apiKey": {
+        "type": "string",
+        "description": "Parvenu API key; falls back to PARVENU_API_KEY"
+      }
+    },
+    "additionalProperties": false
+  },
+  "contracts": {
+    "tools": [
+      "parvenu_credit_check",
+      "parvenu_all_lists",
+      "parvenu_search_lead_locations",
+      "parvenu_lead_list_start",
+      "parvenu_list_status",
+      "parvenu_list_download",
+      "parvenu_email_lookup",
+      "parvenu_linkedin_profile",
+      "parvenu_company_search"
+    ]
+  }
+}
